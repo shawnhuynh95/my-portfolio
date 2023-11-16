@@ -7,7 +7,7 @@ const Navbar = () => {
     <div className="navbar">
       <Sidebar />
       <div className="wrapper">
-        <div className="logo"><span>Shawn</span>Def</div>
+        <div className="logo"><span>Shawnn</span>Def</div>
         <div className="social">
           <a href="#">
             <img src="/facebook.png" alt="" />
