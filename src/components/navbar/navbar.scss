@@ -18,7 +18,7 @@
     .logo {
       font-weight: bold;
       font-size: 30px;
-      margin-left: 20px;
+      margin-left: 100px;
       // text-shadow: 10px;
       span {
         color: orange;
@@ -26,12 +26,16 @@
       @include mobile {
         display: none;
       }
+      @include tablet {
+        margin-left: 100px;
+      }
     }
 
     .social {
       display: flex;
       gap: 20px;
-
+      margin-right: 20px;
+      
       img {
         width: 20px;
         height: 20px;

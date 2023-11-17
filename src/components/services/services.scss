@@ -15,11 +15,16 @@
     align-items: center;
     gap: 20px;
 
+    @include desktop {
+      margin-top: 10px;
+    }
+
     @include mobile {
       align-self: center;
       text-align: center;
       flex-direction: column;
-      margin-top: 10px;
+      margin-bottom: 10px;
+      gap: 5px;
     }
 
     p {
@@ -28,10 +33,12 @@
       color: gray;
       text-align: right;
 
-      @include mobile {
-        align-self: center;
-        text-align: center;
+      @include tablet {
         font-size: 16px;
+      }
+
+      @include mobile {
+        text-align: center;
       }
     }
 
@@ -40,8 +47,16 @@
       border: none;
       border-top: 0.5px solid gray;
 
-      @include mobile {
+      @include desktop {
+        width: 400px;
+      }
+
+      @include tablet {
         width: 300px;
+      }
+
+      @include mobile {
+        width: 250px;
       }
     }
   }
@@ -51,28 +66,45 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include tablet {
+      margin: 20px 0;
+    }
+
     @include mobile {
-      width: 100%;
-      // margin-top: 20px;
+      margin: 0;
     }
 
     .title {
       display: flex;
       align-items: center;
       gap: 50px;
+
       @include mobile {
         text-align: center;
         flex-direction: column;
-        gap: 20px;
+        gap: 5px;
       }
+
       img {
         width: 300px;
         height: 100px;
         border-radius: 50px;
         object-fit: cover;
+
+        @include desktop {
+          width: 250px;
+          height: 75px;
+          border-radius: 40px;
+        }
+
+        @include tablet {
+          height: 60px;
+        }
+
         @include mobile {
           width: 150px;
-          height: 50px;
+          height: 40px;
           border-radius: 25px;
         }
       }
@@ -80,8 +112,17 @@
       h1 {
         font-size: 96px;
         font-weight: 100;
+
+        @include desktop {
+          font-size: 72px;
+        }
+
+        @include tablet {
+          font-size: 50px;
+        }
+
         @include mobile {
-          font-size: 36px;
+          font-size: 30px;
         }
       }
 
@@ -93,9 +134,21 @@
         border: none;
         cursor: pointer;
         font-size: 24px;
+
+        @include desktop {
+          width: 250px;
+          height: 75px;
+          border-radius: 40px;
+          font-size: 20px;
+        }
+
+        @include tablet {
+          height: 60px;
+        }
+
         @include mobile {
           width: 150px;
-          height: 50px;
+          height: 40px;
           border-radius: 25px;
           font-size: 12px;
         }
@@ -111,7 +164,7 @@
 
     @include mobile {
       flex-direction: column;
-      margin-top: 20px;
+      margin: 10px 40px 0 40px;
     }
 
     .box {
@@ -121,11 +174,19 @@
       padding: 50px;
       justify-content: space-between;
 
+      @include desktop {
+        padding: 25px;
+      }
+
       @include mobile {
-        padding: 20px;
+        padding: 10px;
       }
 
       h2 {
+        @include desktop {
+          font-size: 20px;
+        }
+
         @include mobile {
           font-size: 16px;
         }
@@ -134,12 +195,20 @@
       p {
         margin-top: 5px;
         text-align: justify;
+
+        @include desktop {
+          font-size: 14px;
+        }
+
+        @include tablet {
+          font-size: 12px;
+        }
+
         @include mobile {
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
-          max-width: 200px;
-          font-size: 12px;
+          max-width: 300px;
         }
       }
 
